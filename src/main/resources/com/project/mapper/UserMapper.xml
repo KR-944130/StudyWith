@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.mapper.UserMapper">
+	<insert id="insert">
+		INSERT INTO USER_INFO
+		(USER_EMAIL, USER_PW, NICKNAME, USER_NAME, USER_PHONE,
+		USER_BIRTH, USER_GENDER, POSTCODE, ADDRESS, DETAIL_ADDRESS, EXTRA_ADDRESS)
+		VALUES
+		(#{userEmail}, #{userPw}, #{nickname}, #{userName}, #{userPhone},
+		#{userBirth}, #{userGender}, #{postCode}, #{address}, #{detailAddress}, #{extraAddress})
+	</insert>
+	
+	<!-- 이메일, 닉네임, 핸드폰 번호 중복 체크 -->
+	<select id="checkDuplication" resultType="_int">
+		SELECT COUNT(*) FROM USER_INFO WHERE
+		<choose>
+			<when test="condition == 'email'.toString()">
+				USER_EMAIL
+			</when>
+			<when test="condition == 'nickname'.toString()">
+				NICKNAME
+			</when>
+			<when test="condition == 'phone'.toString()">
+				USER_PHONE
+			</when>
+		</choose>
+		= #{data}
+	</select>
+	
+	<!-- 사용자 이메일로 회원 탈퇴 -->
+	<delete id="delete">
+		DELETE FROM USER_INFO WHERE USER_EMAIL = #{userEmail}
+	</delete>
+</mapper>

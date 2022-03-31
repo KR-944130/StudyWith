@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'LeferiPoint-WhiteObliqueA';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	background-color: black;
+	color: white;
+}
+
+#join-form {
+	margin: 20px auto;
+	width: 1000px;
+}
+
+input {
+	color: white;
+}
+
+input:focus, select:focus {
+	outline: none;
+}
+
+label {
+	font-family: 'LeferiPoint-WhiteObliqueA';
+}
+
+#join-form>div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#join-form>div>div:nth-child(1) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
+	height: 50px;
+	border: 1px solid #e0e0e0;
+	box-sizing: border-box;
+}
+
+#join-form>div>div:nth-child(2) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+input[type=text], input[type=password] {
+	width: 500px;
+	height: 50px;
+	border: 1px solid #e0e0e0;
+	background: transparent;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+#pwCheckBox {
+	position: absolute;
+	right: 10px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+}
+
+select {
+	width: 60px;
+	height: 30px;
+	background: black;
+	color: white;
+	border: 1px solid #e0e0e0;
+}
+
+select>option {
+	background: black;
+	color: white;
+}
+
+#phone-container, #gender-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 500px;
+	height: 50px;
+	border: 1px solid #e0e0e0;
+	background: transparent;
+	box-sizing: border-box;
+}
+
+#userPhone2, #userPhone3 {
+	width: 100px;
+	height: 30px;
+	text-align: center;
+}
+
+#gender-container>div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+}
+
+input[type=button] {
+	font-family: 'LeferiPoint-WhiteObliqueA';
+	width: 100px;
+	height: 50px;
+	border: 1px solid #e0e0e0;
+	background: transparent;
+	box-sizing: border-box;
+}
+
+input[type=button]:hover {
+	cursor: pointer;
+	background-color: #e0e0e0;
+	color: black;
+}
+
+#userEmail, #postcode, #nickname, #phone-container {
+	width: 400px;
+}
+
+.check {
+	font-family: 'LeferiPoint-WhiteObliqueA';
+	margin: 0 auto;
+	width: 650px;
+	height: 50px;
+	border: 1px solid #e0e0e0;
+	box-sizing: border-box;
+}
+
+#submit-btn {
+	width: 650px !important;
+	height: 50px !important;
+}
+
+#submit-btn:hover {
+	cursor: pointer;
+	background-color: #e0e0e0;
+	color: black;
+}
+
+.gender-box {
+	width: 15px;
+	height: 15px;
+	background-color: white;
+}
+.gender-box:hover {
+	cursor:pointer;
+}
+
+#auth {
+	width: 149px !important;
+}
+
+#mail-auth-text {
+	display: flex; align-items: center; justify-content: center;
+	width: 400px; height: 50px; border: 1px solid #e0e0e0; box-sizing: border-box;
+}

@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+body {
+	background-color: black;
+}
+
+input:focus {
+	outline: none;
+}
+
+input::placeholder {
+	color: white;
+}
+
+a {
+	text-decoration: none;
+}
+
+.flex-col-center {
+	display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.hover-pointer:hover {
+	cursor: pointer;
+}
+
+#login-form {
+	width: 500px;
+	height: 200px;
+	margin: 0 auto;
+}
+
+#user-email, #user-pw {
+	border: 2px solid white;
+	background: transparent;
+	color: white;
+	padding: 15px;
+	width: 350px;
+	font-size: 16px;
+}
+
+#user-pw, #login-btn {
+	margin-top: 15px;
+}
+
+#login-btn {
+	width: 350px;
+	height: 35px;
+	border: none;
+	border-radius: 5px;
+	background-color: #00e676;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.join-find {
+	width: 500px;
+	margin: 0 auto;
+	maring-top: 15px;
+}
+.join-find a {
+	display: inline-block;
+	padding: 5px;
+	color: white;
+}
+@media screen and (max-width: 767px) {
+	#login-form {
+		width: auto;
+	}
+	#user-email, #user-pw {
+		border: 2px solid white;
+		padding: 15px;
+		width: 300px;
+		font-size: 15px;
+	}
+	#login-btn {
+		width: 300px;
+		font-size: 15px;
+	}
+	.join-find {
+		width: auto;
+	}
+	.join-find a {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#login-form {
+		width: auto;
+	}
+	#user-email, #user-pw {
+		border: 2px solid white;
+		padding: 15px;
+		width: 250px;
+		font-size: 13px;
+	}
+	#login-btn {
+		width: 250px;
+		font-size: 13px;
+	}
+	.join-find {
+		width: auto;
+	}
+	.join-find a {
+		font-size: 13px;
+	}
+}

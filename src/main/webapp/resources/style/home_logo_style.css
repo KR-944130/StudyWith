@@ -1,0 +1,86 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Cafe24Ohsquareair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/Cafe24Ohsquareair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.flex-center {
+	display: flex; align-items: center; justify-content: center;
+}
+#home-logo {
+	font-family: 'Smooch Sans';
+	width: 512px;
+	height: 128px;
+	margin: 0 auto;
+	margin-top: 50px; font-size : 110px;
+	font-weight: bold;
+	color: #00e676;
+	text-shadow: 3px 3px 2px #76ff03;
+	font-size: 110px;
+}
+#home-logo:hover {
+	cursor: pointer;
+}
+.focus-in-expand {
+	-webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+#sub-title {
+	font-family: 'Cafe24Ohsquareair';
+	color: white;
+	width: 500px;
+	height: 80px;
+	margin: 0 auto;
+	font-size: 30px;
+}
+
+#sub-title span {
+	animation: waviy 2s infinite;
+	animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+@media screen and (max-width: 767px) {
+	#home-logo {
+		width: auto;
+		font-size: 90px;
+	}
+	#sub-title {
+		width: auto;
+		font-size: 25px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#home-logo {
+		width: auto;
+		font-size: 80px;
+	}
+	#sub-title {
+		width: auto;
+		font-size: 20px;
+	}
+}
